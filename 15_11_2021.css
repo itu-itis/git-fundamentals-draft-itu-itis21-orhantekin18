@@ -2,6 +2,11 @@ h1	{
 	font-size: 24pt;
 	color: red;
 	font-family: tahoma, helvetica, sans-serif;
+	text-align:: center;
+	border: thick solid red;
+	text-decoration: none;
+	padding: 1ex;
+	width: 50%;
 	}
 em	{
 	font-style: normal;
@@ -25,12 +30,5 @@ li:first-child {
 	}
 p.centered {
 	text-align: center;
-	width: 50%;
-	}
-h1: {
-	text-align:: center;
-	border: thick solid red;
-	text-decoration: none;
-	padding: 1ex;
 	width: 50%;
 	}
