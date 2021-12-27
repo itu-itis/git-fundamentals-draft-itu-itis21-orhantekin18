@@ -7,11 +7,14 @@
 	<link rel= "stylesheet" type= "text/css" href= "15_11_2021.css"/>
 <title> My Web Page </title>
 <head>
-<body>
+<body	onload="document.body.style.backgroundColor='pink'; sayHello()"
+		onresize="document.body.style.backgroundColor='lightblue'"
+		onkeydown="document.body.style.backgroundColor='white'"
+		onkeyup="document.body.style.backgroundColor='lightyellow'">
 <p>
 <strong> Introduction to Information Systems </strong>
 </p>
-<p class = "centered">
+<p class = "centered" onmouseover='document.querySelector(".centered").style.font="bold 20pt arial, serif"'>
 <em>
 Senih Orhantekin
 <br>
@@ -20,18 +23,20 @@ Senih Orhantekin
 </p>
 
 <p> Evolution of homo species </p>
-<ul>
+
+<ul id='ul-01' onmouseover="document.getElementById('ul-01').style.backgroundColor='purple'">
 	<li> Homo habilis (able man) </li>
 	<li> Homo erectus (upright man) </li>
 	<li> neanderthalensis </li>
 	<li> Homo floresiensis (hobbit) </li>
 	<li> Homo sapiens (wise man) </li>
-	<ul>
+	<ul id='ul-02' onclick="document.getElementById('ul-02').style.backgroundColor='orange'">
 		<li> Homo sapiens sapiens </li>
 	</ul>
 </ul>
 
-<h1> <strong> Human Evolution </strong> </h1>
+<h1 onmouseover="style.color='orange'; style.backgroundColor='lightgreen'"
+	onmouseout="style.color='red'; style.backgroundColor='white'"> <strong> Human Evolution </strong> </h1>
 <p> <img src="evolution-diagram.png"> </p>
 
 <p> You can find the link of the image below.
@@ -40,7 +45,10 @@ Senih Orhantekin
 
 <h2> <strong> The clickable image </strong> </h2>
 <p> This image is clickable, click on it and try.
-	<a href="https://www.biologyonline.com/dictionary/homo-sapiens-sapiens"> <img src="evolution-diagram.png"> </a>
+	<a href="https://www.biologyonline.com/dictionary/homo-sapiens-sapiens">
+		 <img	id='img-01' alt='You are about to leave our webpage.' 
+				onclick='alert(document.getElementById("img-01").alt)'
+				 src="evolution-diagram.png"> </a>
 </p>
 
 <table>
@@ -78,5 +86,9 @@ These primates include humans,
 	monkeys.
 </pre>
 
+<script> function sayHello() {
+		alert("Welcome aboard!");
+	}
+	</script>
 </body>
 </html>
